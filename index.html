@@ -1,0 +1,1028 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mariana González | Diseñadora de Modas</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Cormorant+Garamond:wght@300;400;500&family=Lora:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="IMG/FIRMA.png">
+
+    <!-- CSS Externo -->
+    <link rel="stylesheet" href="CSS/style.css">
+
+    <style>
+        :root {
+            --dark-bg: #0F0F0F;
+            --dark-card: #1A1A1A;
+            --accent-cream: #E5D4B8;
+            --accent-magenta: #C41E6C;
+            --text-light: #E8E8E8;
+            --text-muted: #B0B0B0;
+            --white: #ffffff;
+            --border-subtle: #2A2A2A;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Lora', serif;
+            background: linear-gradient(135deg, #0F0F0F 0%, #1A1A1A 50%, #0F0F0F 100%);
+            background-attachment: fixed;
+            color: var(--text-light);
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+
+        /* ========== HERO SECTION ========== */
+        .hero-section {
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(229, 212, 184, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(196, 30, 108, 0.05) 0%, transparent 50%),
+                linear-gradient(135deg, #1A1A1A 0%, #0F0F0F 50%, #1A1A1A 100%);
+            background-attachment: fixed;
+            padding: 80px 20px;
+            text-align: center;
+            border-bottom: 1px solid var(--border-subtle);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle, rgba(229, 212, 184, 0.02) 1px, transparent 1px);
+            background-size: 80px 80px;
+            background-position: 0 0;
+            pointer-events: none;
+            animation: subtle-float 25s ease-in-out infinite;
+        }
+
+        .hero-section::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                repeating-linear-gradient(
+                    90deg,
+                    transparent,
+                    transparent 2px,
+                    rgba(229, 212, 184, 0.015) 2px,
+                    rgba(229, 212, 184, 0.015) 4px
+                );
+            pointer-events: none;
+            opacity: 0.5;
+        }
+
+        @keyframes subtle-float {
+            0%, 100% { opacity: 0.6; }
+            50% { opacity: 0.9; }
+        }
+
+        .hero-container {
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-image {
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 2px solid var(--accent-cream);
+            box-shadow: 0 8px 32px rgba(229, 212, 184, 0.15);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+
+        .hero-image:hover {
+            transform: scale(1.02);
+            box-shadow: 0 12px 40px rgba(229, 212, 184, 0.25);
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .profile-link {
+            display: inline-block;
+            border-radius: 50%;
+            width: 100%;
+            height: 100%;
+        }
+
+        .hero-content {
+            animation: fadeInUp 0.8s ease;
+        }
+
+        .hero-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5em;
+            font-weight: 600;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+            color: var(--accent-cream);
+        }
+
+        .hero-subtitle {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.2em;
+            font-weight: 300;
+            letter-spacing: 3px;
+            color: var(--accent-cream);
+            margin-bottom: 30px;
+        }
+
+        .hero-divider {
+            width: 60px;
+            height: 1px;
+            background: var(--accent-cream);
+            margin: 0 auto;
+        }
+
+        /* ========== MAIN CONTAINER ========== */
+        .main-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* ========== SECCIONES GENERALES ========== */
+        .section {
+            padding: 60px 0;
+            border-bottom: 1px solid var(--border-subtle);
+            animation: fadeInUp 0.8s ease;
+        }
+
+        .section:last-child {
+            border-bottom: none;
+        }
+
+        .section-header {
+            margin-bottom: 40px;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8em;
+            font-weight: 500;
+            letter-spacing: 1px;
+            color: var(--accent-cream);
+            margin-bottom: 15px;
+        }
+
+        .title-underline {
+            width: 50px;
+            height: 1px;
+            background: var(--accent-cream);
+            margin-top: 15px;
+        }
+
+        /* ========== SECCIÓN: PERFIL ========== */
+        .section-profile {}
+
+        .profile-content {
+            max-width: 800px;
+        }
+
+        .profile-text {
+            font-family: 'Lora', serif;
+            font-size: 1.05em;
+            line-height: 1.9;
+            color: var(--text-muted);
+            font-weight: 400;
+        }
+
+        /* ========== SECCIÓN: CONTACTO ========== */
+        .section-contact {}
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .contact-item {
+            background: rgba(229, 212, 184, 0.03);
+            padding: 25px;
+            border-left: 2px solid var(--accent-cream);
+            transition: all 0.3s ease;
+        }
+
+        .contact-label {
+            display: block;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 0.85em;
+            font-weight: 500;
+            color: var(--accent-cream);
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 10px;
+        }
+
+        .contact-value {
+            font-family: 'Lora', serif;
+            font-size: 1em;
+            color: var(--text-light);
+            margin: 0;
+        }
+
+        .contact-value a {
+            color: var(--accent-cream);
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: all 0.3s ease;
+        }
+
+        /* ========== SECCIÓN: EDUCACIÓN ========== */
+        .section-education {}
+
+        .education-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .education-item {
+            font-family: 'Lora', serif;
+            font-size: 1.05em;
+            color: var(--text-muted);
+            padding: 15px 0;
+            padding-left: 25px;
+            position: relative;
+            border-bottom: 1px solid var(--border-subtle);
+        }
+
+        .education-item:before {
+            content: "◆";
+            position: absolute;
+            left: 0;
+            color: var(--accent-cream);
+            font-size: 0.6em;
+        }
+
+        .education-item:last-child {
+            border-bottom: none;
+        }
+
+        /* ========== SECCIÓN: HABILIDADES ========== */
+        .section-skills {}
+
+        .skills-wrapper {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 50px;
+        }
+
+        .skill-category {
+            transition: all 0.3s ease;
+        }
+
+        .skill-header {
+            margin-bottom: 30px;
+        }
+
+        .skill-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3em;
+            font-weight: 500;
+            letter-spacing: 1px;
+            color: var(--accent-cream);
+            margin-bottom: 12px;
+        }
+
+        .skill-divider {
+            width: 40px;
+            height: 1px;
+            background: var(--accent-cream);
+            margin-top: 12px;
+        }
+
+        .skill-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .skill-item {
+            font-family: 'Lora', serif;
+            font-size: 0.95em;
+            color: var(--text-muted);
+            padding: 12px 0;
+            padding-left: 20px;
+            position: relative;
+            border-bottom: 1px solid rgba(229, 212, 184, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .skill-item:before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: var(--accent-cream);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .skill-item:last-child {
+            border-bottom: none;
+        }
+
+        /* ========== SECCIÓN: PORTAFOLIO (DESTACADA) ========== */
+        .section-highlight {
+            background: linear-gradient(135deg, rgba(229, 212, 184, 0.03) 0%, rgba(229, 212, 184, 0.02) 100%);
+            padding: 80px 40px;
+            border-top: 1px solid var(--accent-cream);
+            border-bottom: 1px solid var(--accent-cream);
+            margin: 40px 0;
+        }
+
+        .portfolio-content {
+            text-align: center;
+        }
+
+        .portfolio-text {
+            font-family: 'Lora', serif;
+            font-size: 1.1em;
+            color: var(--text-muted);
+            margin-bottom: 35px;
+            font-weight: 400;
+            line-height: 1.8;
+        }
+
+        .portfolio-action {
+            display: flex;
+            justify-content: center;
+        }
+
+        /* ========== BOTONES ========== */
+        .btn {
+            display: inline-block;
+            padding: 16px 45px;
+            border-radius: 0;
+            text-decoration: none;
+            border: none;
+            font-size: 0.95em;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            transition: all 0.4s ease;
+            cursor: pointer;
+            text-transform: uppercase;
+        }
+
+        .btn-primary {
+            background: var(--accent-cream);
+            color: var(--dark-bg);
+            border: 2px solid var(--accent-cream);
+        }
+
+        /* ========== FOOTER ========== */
+        .footer {
+            background: linear-gradient(180deg, #0F0F0F 0%, #000000 100%);
+            padding: 40px 20px;
+            border-top: 1px solid var(--border-subtle);
+            margin-top: 60px;
+        }
+
+        .footer-content {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .footer-text {
+            font-size: 0.9em;
+            color: var(--text-muted);
+            letter-spacing: 0.5px;
+        }
+
+        /* ========== ANIMACIONES ========== */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes glow {
+            0%, 100% {
+                box-shadow: 0 8px 32px rgba(229, 212, 184, 0.15);
+            }
+            50% {
+                box-shadow: 0 12px 40px rgba(229, 212, 184, 0.3);
+            }
+        }
+
+        @keyframes underlineExpand {
+            from {
+                width: 0;
+            }
+            to {
+                width: 100%;
+            }
+        }
+
+        @keyframes scaleIn {
+            from {
+                opacity: 0;
+                transform: scale(0.95);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes shimmer {
+            0% {
+                background-position: -1000px 0;
+            }
+            100% {
+                background-position: 1000px 0;
+            }
+        }
+
+        /* ========== APLICAR ANIMACIONES ========== */
+        .hero-section {
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        .hero-image {
+            animation: scaleIn 0.8s ease-out;
+        }
+
+        .hero-content {
+            animation: fadeInUp 0.8s ease-out 0.2s both;
+        }
+
+        .section {
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .contact-item {
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .contact-item:nth-child(1) {
+            animation-delay: 0.1s;
+        }
+
+        .contact-item:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .contact-item:nth-child(3) {
+            animation-delay: 0.3s;
+        }
+
+        .contact-item:nth-child(4) {
+            animation-delay: 0.4s;
+        }
+
+        .education-item {
+            animation: slideInLeft 0.6s ease-out;
+        }
+
+        .education-item:nth-child(1) {
+            animation-delay: 0.1s;
+        }
+
+        .education-item:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .skill-category {
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .skill-category:nth-child(1) {
+            animation-delay: 0.1s;
+        }
+
+        .skill-category:nth-child(2) {
+            animation-delay: 0.3s;
+        }
+
+        .skill-item {
+            animation: slideInLeft 0.5s ease-out;
+        }
+
+        /* ========== EFECTOS HOVER AVANZADOS ========== */
+        .hero-image:hover {
+            animation: glow 2s ease-in-out infinite;
+        }
+
+        .section-title {
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        .section-title:hover {
+            color: var(--accent-cream);
+            text-shadow: 0 0 20px rgba(229, 212, 184, 0.3);
+        }
+
+        .contact-item {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(229, 212, 184, 0.1), transparent);
+            transition: left 0.5s ease;
+            pointer-events: none;
+        }
+
+        .contact-item:hover::before {
+            left: 100%;
+        }
+
+        .contact-label {
+            transition: all 0.3s ease;
+        }
+
+        .contact-item:hover .contact-label {
+            letter-spacing: 2px;
+            transform: translateX(5px);
+        }
+
+        .education-item {
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .education-item:hover {
+            padding-left: 35px;
+            color: var(--accent-cream);
+        }
+
+        .education-item:before {
+            transition: all 0.3s ease;
+        }
+
+        .education-item:hover:before {
+            transform: scale(1.3) rotate(360deg);
+        }
+
+        .skill-item {
+            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+            position: relative;
+        }
+
+        .skill-item::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: var(--accent-cream);
+            transition: width 0.4s ease;
+        }
+
+        .skill-item:hover::after {
+            width: 100%;
+        }
+
+        .skill-item:hover {
+            padding-left: 30px;
+            color: var(--accent-cream);
+        }
+
+        .skill-item:hover:before {
+            opacity: 1;
+            transform: translateX(5px);
+        }
+
+        .contact-value a {
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .contact-value a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background: var(--accent-magenta);
+            transition: width 0.3s ease;
+        }
+
+        .contact-value a:hover::after {
+            width: 100%;
+        }
+
+        .contact-value a:hover {
+            color: var(--accent-magenta);
+        }
+
+        .btn {
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.1);
+            transition: left 0.5s ease;
+        }
+
+        .btn:hover::before {
+            left: 100%;
+        }
+
+        .btn-primary:hover {
+            background: transparent;
+            color: var(--accent-cream);
+            transform: translateY(-4px);
+            box-shadow: 0 15px 40px rgba(229, 212, 184, 0.3);
+            letter-spacing: 2px;
+        }
+
+        .portfolio-text {
+            transition: all 0.3s ease;
+        }
+
+        .portfolio-text:hover {
+            color: var(--accent-cream);
+        }
+
+        /* ========== EFECTO ENTRADA EN CASCADA ========== */
+        .section:nth-child(1) { animation-delay: 0s; }
+        .section:nth-child(2) { animation-delay: 0.2s; }
+        .section:nth-child(3) { animation-delay: 0.4s; }
+        .section:nth-child(4) { animation-delay: 0.6s; }
+        .section:nth-child(5) { animation-delay: 0.8s; }
+        .section:nth-child(6) { animation-delay: 1s; }
+
+        /* ========== EFECTO SUBRAYADO ELEGANTE ========== */
+        .section-title {
+            overflow: hidden;
+        }
+
+        .title-underline {
+            transition: all 0.4s ease;
+            transform-origin: left center;
+        }
+
+        .section-title:hover + .title-underline {
+            width: 100%;
+            transform: scaleX(1.2);
+        }
+
+        .skill-title:hover {
+            color: var(--accent-cream);
+            text-shadow: 0 0 15px rgba(229, 212, 184, 0.2);
+        }
+
+        /* ========== RESPONSIVE ========== */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5em;
+                letter-spacing: 2px;
+            }
+
+            .hero-subtitle {
+                font-size: 1em;
+                letter-spacing: 1px;
+            }
+
+            .section {
+                padding: 40px 0;
+            }
+
+            .section-highlight {
+                padding: 50px 25px;
+            }
+
+            .section-title {
+                font-size: 1.5em;
+                letter-spacing: 1px;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .skills-wrapper {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .btn {
+                padding: 13px 35px;
+                font-size: 0.9em;
+                letter-spacing: 1px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-section {
+                padding: 50px 15px;
+            }
+
+            .hero-image {
+                width: 160px;
+                height: 160px;
+            }
+
+            .hero-title {
+                font-size: 2em;
+            }
+
+            .main-container {
+                padding: 0 15px;
+            }
+
+            .section {
+                padding: 30px 0;
+            }
+
+            .section-title {
+                font-size: 1.3em;
+            }
+        }
+    </style>
+</head>
+
+
+<body>
+    <!-- HERO SECTION -->
+    <header class="hero-section">
+        <div class="hero-container">
+            <div class="hero-image">
+                <a href="https://www.instagram.com/marteg.design/" target="_blank" class="profile-link" title="Visita mi Instagram">
+                    <img src="IMG/PERFIL2 ING.jpg" alt="Mariana González - Diseñadora de Modas">
+                </a>
+            </div>
+            
+            <div class="hero-content">
+                <h1 class="hero-title">Mariana González</h1>
+                <p class="hero-subtitle">Diseñadora de Modas</p>
+                <div class="hero-divider"></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- CONTENEDOR PRINCIPAL -->
+    <main class="main-container">
+        
+        <!-- SECCIÓN: PERFIL PROFESIONAL -->
+        <section class="section section-profile">
+            <div class="section-header">
+                <h2 class="section-title">Perfil Profesional</h2>
+                <div class="title-underline"></div>
+            </div>
+            
+            <article class="profile-content">
+                <p class="profile-text">
+                    <div class="profile-text">
+  <p>
+    No entiendo la moda como simple producto, la entiendo como lenguaje. 
+    Cada prenda que diseño parte de una intención: comunicar, transformar y adaptarse a quien la habita.
+  </p>
+
+  <p>
+    Mi proceso creativo no es lineal, es estructurado con libertad. Investigo, cuestiono y construyo desde la idea 
+    hasta el detalle técnico, desarrollando colecciones coherentes que equilibran estética, funcionalidad y proyección comercial. 
+    No me quedo en el concepto, llevo cada idea a una ejecución real, pensada para un consumidor contemporáneo 
+    que busca versatilidad sin renunciar al diseño.
+  </p>
+
+  <p>
+    Trabajo desde la precisión. Desarrollo de colecciones, patronaje (valor agregado), fichas técnicas, diseño de estampados, diseño de inusmos,  entendiendo 
+    que el diseño no termina en el boceto, sino en la prenda bien resuelta. Integro la gestión de proveedores, 
+    la búsqueda de insumos y la toma de decisiones materiales como parte esencial del proceso creativo.
+  </p>
+
+  <p>
+    Me muevo entre lo conceptual y lo tangible con naturalidad. Esa dualidad define mi trabajo: una mente creativa 
+    que propone y una visión técnica que resuelve. No replico tendencias, las interpreto. No diseño por inercia, 
+    diseño con propósito.
+  </p>
+
+  <p>
+    Mi enfoque está en crear piezas modernas, versátiles y con carácter, pensadas para mujeres que buscan 
+    diferenciarse desde lo auténtico, no desde lo evidente.
+  </p>
+</div>
+            </article>
+        </section>
+
+        <!-- SECCIÓN: INFORMACIÓN DE CONTACTO -->
+        <section class="section section-contact">
+            <div class="section-header">
+                <h2 class="section-title">Información de Contacto</h2>
+                <div class="title-underline"></div>
+            </div>
+            
+            <div class="contact-grid">
+                <div class="contact-item">
+                    <span class="contact-label">Nombre</span>
+                    <p class="contact-value">Mariana González</p>
+                </div>
+                
+                <div class="contact-item">
+                    <span class="contact-label">Teléfono</span>
+                    <p class="contact-value">+57 3209406262</p>
+                </div>
+                
+                <div class="contact-item">
+                    <span class="contact-label">Correo</span>
+                    <p class="contact-value">
+                        <a href="mailto:marianagonzalezgonzalez65@gmail.com">marianagonzalezgonzalez65@gmail.com</a>
+                    </p>
+                </div>
+                
+                <div class="contact-item">
+                    <span class="contact-label">Portafolio Online</span>
+                    <p class="contact-value">
+                        <a href="IMG/PORTAFOLIO MARIANA GONZÁLEZ_compressed.pdf" target="_blank">www.portafolio.com</a>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN: EDUCACIÓN -->
+        <section class="section section-education">
+            <div class="section-header">
+                <h2 class="section-title">Educación</h2>
+                <div class="title-underline"></div>
+            </div>
+            
+            <article class="education-content">
+                <ul class="education-list">
+                    <li class="education-item">Técnico/Profesional en Diseño de Modas</li>
+                    <li class="education-item">Técnico Diseño Gráfico</li>
+                </ul>
+            </article>
+        </section>
+
+        <!-- SECCIÓN: HABILIDADES (TÉCNICAS Y BLANDAS) -->
+        <section class="section section-skills">
+            <div class="skills-wrapper">
+                <!-- HABILIDADES TÉCNICAS -->
+                <article class="skill-category skill-technical">
+                    <div class="skill-header">
+                        <h3 class="skill-title">Habilidades Técnicas</h3>
+                        <div class="skill-divider"></div>
+                    </div>
+                    
+                    <ul class="skill-list">
+  <li class="skill-item">Desarrollo de colecciones con narrativa conceptual</li>
+  <li class="skill-item">Diseño de modas con enfoque funcional y contemporáneo</li>
+  <li class="skill-item">Patronaje y construcción de prendas</li>
+  <li class="skill-item">Elaboración de fichas técnicas detalladas</li>
+  <li class="skill-item">Investigación y análisis de tendencias</li>
+  <li class="skill-item">Gestión de proveedores y sourcing de materiales</li>
+  <li class="skill-item">Selección estratégica de insumos</li>
+  <li class="skill-item">Dirección creativa e identidad de marca</li>
+  <li class="skill-item">Organización y control de procesos productivos</li>
+  <li class="skill-item">Resolución creativa aplicada al diseño</li>
+</ul>
+                    </ul>
+                </article>
+
+                <!-- COMPETENCIAS BLANDAS -->
+                <article class="skill-category skill-soft">
+                    <div class="skill-header">
+                        <h3 class="skill-title">Competencias Blandas</h3>
+                        <div class="skill-divider"></div>
+                    </div>
+                    
+                    <ul class="skill-list">
+                        <li class="skill-item">Creatividad estratégica</li>
+                        <li class="skill-item">Pensamiento conceptual</li>
+                        <li class="skill-item">Organización y disciplina</li>
+                        <li class="skill-item">Trabajo en equipo</li>
+                        <li class="skill-item">Adaptabilidad</li>
+                        <li class="skill-item">Comunicación efectiva</li>
+                    </ul>
+                </article>
+                <!-- SECCIÓN: HERRAMIENTAS -->
+        <section class="section section-skills">
+            <div class="skills-wrapper">
+                <!-- HERRAMIENTAS -->
+                <article class="skill-category skill-technical">
+                    <div class="skill-header">
+                        <h3 class="skill-title">Herramientas</h3>
+                        <div class="skill-divider"></div>
+                    </div>
+                    
+                    <ul class="skill-list">
+                        <li class="skill-card">Adobe Illustrator</li>
+                        <li class="skill-card">Adobe Photoshop</li>
+                        <li class="skill-card">Optitex</li>
+                        <li class="skill-card">Microsoft Excel</li>
+                    </ul>
+                </article>
+        </section> 
+         </ul> </p>
+                </div>
+        <!-- SECCIÓN: PORTAFOLIO (DESTACADA) -->
+        <section class="section section-portfolio section-highlight">
+            <div class="section-header">
+                <h2 class="section-title">Portafolio</h2>
+                <div class="title-underline"></div>
+            </div>
+            
+            <article class="portfolio-content">
+                <p class="portfolio-text">Explora mi colección completa de proyectos y diseños.</p>
+                
+                <div class="portfolio-action">
+                    <a href="IMG/PORTAFOLIO MARIANA GONZÁLEZ_compressed.pdf" target="_blank" class="btn btn-primary">
+                        Abrir Portafolio Completo
+                    </a>
+                </div>
+            </article>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p class="footer-text"> &copy; 2026 Mariana González — Diseñadora de Modas - 3209406262</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
